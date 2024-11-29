@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task5.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Product List" 
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Grid x:Name="ProductsGrid"
+              ColumnDefinitions="Auto, *">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label Text="ID" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="Name" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+            <Button Text="Add Product" 
+                    Clicked="AddProductClicked" 
+                    HorizontalOptions="Center" />
+            <Button Text="Remove Product" 
+                    Clicked="RemoveProductClicked" 
+                    HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
